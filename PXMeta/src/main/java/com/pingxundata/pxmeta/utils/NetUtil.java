@@ -14,15 +14,15 @@ public class NetUtil {
     /**
      * 没有连接网络
      */
-    private static final int NETWORK_NONE = -1;
+    public static final int NETWORK_NONE = -1;
     /**
      * 移动网络
      */
-    private static final int NETWORK_MOBILE = 0;
+    public static final int NETWORK_MOBILE = 0;
     /**
      * 无线网络
      */
-    private static final int NETWORK_WIFI = 1;
+    public static final int NETWORK_WIFI = 1;
 
 
     public static int getNetWorkState(Context context) {
@@ -30,8 +30,7 @@ public class NetUtil {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);
 
-        NetworkInfo activeNetworkInfo = connectivityManager
-                .getActiveNetworkInfo();
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
 
             if (activeNetworkInfo.getType() == (ConnectivityManager.TYPE_WIFI)) {

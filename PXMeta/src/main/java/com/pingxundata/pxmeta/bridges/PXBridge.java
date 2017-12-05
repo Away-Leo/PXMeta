@@ -30,7 +30,7 @@ public class PXBridge {
     }
 
     @JavascriptInterface
-    public void showAndroid(){
+    public void showAndroid(String metodName){
         if(ObjectHelper.isNotEmpty(mActivity)){
             mActivity.runOnUiThread(new Runnable() {
                 @Override
